@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import {ClienteService} from './server/cliente.service';
+
+
 
 @Component({
   selector: 'app-root',
@@ -6,5 +9,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+   title:string;
+   dados:any
+
+  constructor(private cliService:ClienteService){
+     this.title = "joao nobre";
+    this.cliService.getPost().subscribe(posts => console.log(posts))
+    this.cliService.getPost().subscribe(posts => {this.dados = posts})
+
+  }
 }
