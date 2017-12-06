@@ -18,7 +18,7 @@ export class AppComponent {
      this.title = "joao nobre";
     this.cliService.getPost().subscribe(posts => console.log(posts))
 
-    this.cliService.getPost().subscribe(posts => {this.dados = posts})
+    this.cliService.getPost().subscribe(posts => {this.dados = posts.data})
 
   }
 }
