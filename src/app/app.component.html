@@ -1,31 +1,43 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
+
+  
+
+      <div>
+          <button type="button" class="btn btn-outline-primary" aria-label="Alinhar na esquerda"><span class="glyphicon glyphicon-align-rigth" aria-hidden="true"></span>
+            <a href="https://www.youtube.com/" role="button"
+            tooltip="Mais um bobo lendo a toa"><span  aria-hidden="true"></span> 
+        Pesquisar
+          </a></button>
+        
+        </div>
+     
+ 
   <h1>
-    Welcome to {{title}}!
+    {{title}}
   </h1>
 
   <div class="container">
-
-  <div>
-
-    <table *ngFor="let dado of dados">
-      <tr>
-        <td>id</td>
-        <td>titulo</td>
-        <td>body</td>
-      </tr>
-  
-      <tr>
-         <td>{{dado.id}}</td>
-         <td>{{dado.nome}}</td>
-         <td>{{dado.email}}</td>
-      </tr>
+   
+<table class="table table-hover table-dark">
+        <thead>
+          <tr>
+            <th scope="col">id</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Email</th>
+          </tr>
+        </thead>
+        <tbody *ngFor="let dado of dados">
+         
+          <tr>
+             <td>{{dado.id}}</td>
+             <td>{{dado.nome}}</td>
+             <td>{{dado.email}}</td>
+          </tr>
+         
+        </tbody>
     </table>
-    <button type="button" class="btn btn-primary" 
-    tooltip="Mais um bobo lendo a toa">
-Button with tooltip
-</button>
-  </div>
+ 
 </div>
 
 
