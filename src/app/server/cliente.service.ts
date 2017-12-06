@@ -10,7 +10,7 @@ export class ClienteService {
   constructor(private http:Http) { }
 
   getPost(){
-   return this.http.get('https://jsonplaceholder.typicode.com/posts').map(result => result.json())
+   return this.http.get('http://localhost:8080/api/cliente').map(result => result.json())
   }
 
 }
