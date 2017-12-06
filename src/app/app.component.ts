@@ -1,3 +1,4 @@
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { Component } from '@angular/core';
 import {ClienteService} from './server/cliente.service';
 import { Cliente } from './cliente/cliente';
@@ -18,7 +19,7 @@ export class AppComponent {
      this.title = "joao nobre";
     this.cliService.getPost().subscribe(posts => console.log(posts))
 
-    this.cliService.getPost().subscribe(posts => {this.dados = posts})
+    this.cliService.getPost().subscribe(posts => {this.dados = posts.data})
 
   }
 }
