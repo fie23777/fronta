@@ -4,7 +4,7 @@
     Welcome to {{title}}!
   </h1>
   <div>
-    <table *ngFor="let dado of dados">
+    <table *ngFor="let dado of dados.data">
       <tr>
         <td>id</td>
         <td>titulo</td>
@@ -13,8 +13,8 @@
   
       <tr>
          <td>{{dado.id}}</td>
-         <td>{{dado.title}}</td>
-         <td>{{dado.body}}</td>
+         <td>{{dado.nome}}</td>
+         <td>{{dado.email}}</td>
       </tr>
     </table>
   </div>
