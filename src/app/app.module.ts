@@ -7,13 +7,15 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { AppComponent } from './app.component';
+import { FiltrosComponent } from './filtros/filtros.component';
 
 
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    FiltrosComponent
   ],
   imports: [
     BrowserModule,HttpModule,FormsModule, BsDropdownModule.forRoot(),
