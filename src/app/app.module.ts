@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {HttpModule} from '@angular/http';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {ClienteService} from './server/cliente.service';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
@@ -20,6 +20,7 @@ import { FiltrosComponent } from './filtros/filtros.component';
   imports: [
     BrowserModule,HttpModule,FormsModule, BsDropdownModule.forRoot(),
     TooltipModule.forRoot(),
+    ReactiveFormsModule,
     ModalModule.forRoot()
   ],
   providers: [ClienteService],
