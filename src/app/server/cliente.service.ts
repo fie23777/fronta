@@ -2,15 +2,22 @@ import { Injectable } from '@angular/core';
 import {Http} from '@angular/http'
 import 'rxjs/add/operator/map';
 import 'rxjs/Rx';
-
+import {environment} from '../../environments/environment';
 
 @Injectable()
 export class ClienteService {
 
-  constructor(private http:Http) { }
+  constructor(private http:Http) {
 
-  getPost(){
-   return this.http.get('http://localhost:8080/api/cliente').map(result => result.json())
-  }
+    let url:string;
+    
+       url = `${environment.cliente}/panel`;
+  
+   }
+   getPost(){
+    return this.http.get(`${environment.cliente}`).map(result => result.json())
+   }
+ 
+ 
 
 }
